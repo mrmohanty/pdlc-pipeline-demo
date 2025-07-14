@@ -2,8 +2,8 @@
 
 cd /home/ec2-user/app || exit 1
 
-# Stop any running instance of the app
-pkill -f app.py
+# Install Python if needed (for example)
+sudo yum install -y python3
 
-# Start the app in the background
-nohup python3 app.py > app.log 2>&1 &
+# Install dependencies (none in your app now, but placeholder)
+# pip3 install -r requirements.txt
