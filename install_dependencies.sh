@@ -1,3 +1,4 @@
 #!/bin/bash
-echo "Installing Python 3..."
-sudo yum install python3 -y
+cd /home/ec2-user/app
+unzip myapp.zip
+echo "Deployed application successfully."
