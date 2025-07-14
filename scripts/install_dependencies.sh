@@ -1,9 +1,9 @@
 #!/bin/bash
 
-cd /home/ec2-user/app
+cd /home/ec2-user/app || exit 1
 
-unzip -o myapp.zip || exit 1
-rm -f myapp.zip
+# Stop any running instance of the app
+pkill -f app.py
 
-# Start app in background
+# Start the app in the background
 nohup python3 app.py > app.log 2>&1 &
