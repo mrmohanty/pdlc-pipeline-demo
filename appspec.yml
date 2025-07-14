@@ -3,10 +3,8 @@ os: linux
 files:
   - source: app.py
     destination: /home/ec2-user/app
-
   - source: scripts/
     destination: /home/ec2-user/app/scripts
-    overwrite: yes
 
 hooks:
   BeforeInstall:
