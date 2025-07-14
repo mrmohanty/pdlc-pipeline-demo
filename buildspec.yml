@@ -8,8 +8,8 @@ phases:
       - echo "Installing dependencies"
   build:
     commands:
-      - echo "Build step - zip code"
-      - zip -r myapp.zip * .[^.]* || true
+      - echo "Zipping application and deployment files"
+      - zip -r myapp.zip app.py scripts/ appspec.yml
 artifacts:
   files:
     - myapp.zip
