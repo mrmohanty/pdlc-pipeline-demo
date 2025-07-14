@@ -1,13 +1,9 @@
 #!/bin/bash
 
-# Go to app directory
 cd /home/ec2-user/app
 
-# Unzip app contents (overwrite if exists)
-unzip -o myapp.zip
-
-# Remove the ZIP after extraction
+unzip -o myapp.zip || exit 1
 rm -f myapp.zip
 
-# Start the server in the background
+# Start app in background
 nohup python3 app.py > app.log 2>&1 &
