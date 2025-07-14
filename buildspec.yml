@@ -4,10 +4,12 @@ phases:
   install:
     runtime-versions:
       python: 3.8
+    commands:
+      - echo "Installing dependencies"
   build:
     commands:
-      - echo "Build step: Nothing to compile for this app"
-
+      - echo "Build step - zip code"
+      - zip -r myapp.zip * .[^.]* || true
 artifacts:
   files:
-    - '**/*'
+    - myapp.zip
