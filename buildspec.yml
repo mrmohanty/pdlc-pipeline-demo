@@ -6,9 +6,10 @@ phases:
       python: 3.8
     commands:
       - echo "Installing dependencies"
+
   build:
     commands:
-      - echo "Build step - no zip now"
+      - echo "Build complete"
 
 artifacts:
   files:
