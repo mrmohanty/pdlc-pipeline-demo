@@ -6,7 +6,10 @@ phases:
       python: 3.8
   build:
     commands:
-      - echo "Build phase - nothing to compile for Python"
+      - echo "Build step complete"
+
 artifacts:
   files:
-    - '**/*'
+    - appspec.yml
+    - app.py
+    - scripts/**/*
