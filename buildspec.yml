@@ -4,12 +4,9 @@ phases:
   install:
     runtime-versions:
       python: 3.8
-    commands:
-      - echo "Installing dependencies"
   build:
     commands:
-      - echo "Build step - no zip now"
-
+      - echo Build started on `date`
 artifacts:
   files:
     - '**/*'
