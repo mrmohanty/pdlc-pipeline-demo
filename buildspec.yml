@@ -4,12 +4,16 @@ phases:
   install:
     runtime-versions:
       python: 3.8
+    commands:
+      - echo "Installing Python dependencies"
+      - pip install -r requirements.txt || echo "No requirements.txt found"
   build:
     commands:
-      - echo "Build step complete"
+      - echo "No build commands needed"
 
 artifacts:
   files:
-    - appspec.yml
     - app.py
+    - appspec.yml
     - scripts/**/*
+    - requirements.txt
